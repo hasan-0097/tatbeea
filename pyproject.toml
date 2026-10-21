@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tatbeea"
+version = "0.1.0"
+description = "Small, dependency-free Arabic text normalization (tashkeel, alef/yeh, digits)."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+keywords = ["arabic", "nlp", "normalization", "search", "tashkeel"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Natural Language :: Arabic",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.scripts]
+tatbeea = "tatbeea.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
